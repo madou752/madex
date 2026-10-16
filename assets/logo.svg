@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MADEX">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0d1c"/><stop offset="1" stop-color="#05050a"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="sliceTop"><rect x="0" y="0" width="512" height="246"/></clipPath>
+    <clipPath id="sliceBot"><rect x="0" y="251" width="512" height="261"/></clipPath>
+  </defs>
+  <!-- fond : carré aux coins coupés -->
+  <path d="M96 24H416L488 96V416L416 488H96L24 416V96Z" fill="url(#bg)"/>
+  <path d="M100 44H412L468 100V412L412 468H100L44 412V100Z" fill="none" stroke="#00f0ff" stroke-opacity=".35" stroke-width="4"/>
+  <!-- pistes de circuit -->
+  <g stroke="#00f0ff" stroke-opacity=".45" stroke-width="4" fill="none">
+    <path d="M44 180H92L108 164"/><path d="M468 332H420L404 348"/>
+  </g>
+  <circle cx="112" cy="160" r="7" fill="#00f0ff" fill-opacity=".8"/>
+  <circle cx="400" cy="352" r="7" fill="#ff2bd6" fill-opacity=".8"/>
+  <!-- monogramme M : ombre magenta décalée (glitch) -->
+  <path d="M148 372V140L256 290L364 140V372" fill="none" stroke="#ff2bd6" stroke-width="40"
+        stroke-linejoin="miter" stroke-miterlimit="2.2" transform="translate(-9 6)" opacity=".85"/>
+  <!-- M cyan en deux tranches légèrement décalées -->
+  <g filter="url(#glow)">
+    <path d="M148 372V140L256 290L364 140V372" fill="none" stroke="#00f0ff" stroke-width="40"
+          stroke-linejoin="miter" stroke-miterlimit="2.2" clip-path="url(#sliceTop)"/>
+    <path d="M148 372V140L256 290L364 140V372" fill="none" stroke="#00f0ff" stroke-width="40"
+          stroke-linejoin="miter" stroke-miterlimit="2.2" clip-path="url(#sliceBot)" transform="translate(6 0)"/>
+  </g>
+  <!-- curseur de terminal -->
+  <rect x="206" y="404" width="100" height="18" fill="#ff2bd6" filter="url(#glow)"/>
+</svg>

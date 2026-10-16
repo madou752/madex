@@ -1,0 +1,11 @@
+numpy
+sounddevice
+faster-whisper
+edge-tts
+miniaudio
+spotipy
+google-api-python-client
+google-auth-oauthlib
+pycaw; sys_platform == "win32"
+comtypes; sys_platform == "win32"
+psutil

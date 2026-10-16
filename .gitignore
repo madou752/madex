@@ -1,0 +1,25 @@
+# Données locales (tokens, profil navigateur, logs)
+data/
+models/
+
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+client_secret*.json
+*token*.json
+credentials*.json
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Mises à jour locales
+*.zip
+updates/
+!.env.example
